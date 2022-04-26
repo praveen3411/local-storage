@@ -1,0 +1,28 @@
+body{
+    margin: 0%;
+    padding: 0%;
+}
+#container{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: rgb(124, 207, 207);
+}
+a:link{
+    text-decoration: none;
+    color: white;
+}
+a:active{
+    color: white;
+}
+a:visited{
+    color: white;
+}
+a:hover{
+    color: deeppink;
+}
+h1{
+    color:chartreuse;
+    text-shadow: 2px 2px 3px black;
+    font-size: 30px;
+}

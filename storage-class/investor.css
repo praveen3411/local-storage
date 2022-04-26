@@ -1,0 +1,42 @@
+form{
+    text-align: center;
+    margin-top: 50px;
+}
+#navbar{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: rgb(95, 95, 222);
+}
+a{
+    text-decoration: none;
+    color: white    ;
+}
+#container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(5,auto);
+    grid-gap: 10px;
+}
+
+p+img{
+    width: 100px;
+    transform: translateX(120px);
+}
+p{
+    text-align: center;
+}
+
+h3{
+    text-align: center;
+}
+
+#container>div{
+    border: 2px solid black;
+    box-shadow: 2px 2px 3px rgb(130, 126, 126);
+    margin-top: 10px;
+}
+img{
+    width: 350px;
+    border-radius: 10px;
+}

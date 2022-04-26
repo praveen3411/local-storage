@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investor-Local-Page</title>
+    <link rel="stylesheet" href="investor.css">
+</head>
+<body>
+    <div id="navbar">
+        <div><a href="invest.html">Back-End</a></div>
+        <div><a href="backend.html">Front-End</a></div>
+    </div>
+    <form id="one">
+        <input type="url" id="don" placeholder="Enter Image Url">
+        <br>
+        <br>
+        <input type="text" id="don1" placeholder="Enter Investor Name">
+        <br>
+        <br>
+        <input type="text" id="don2" placeholder="Enter Investor work">
+        <br>
+        <br>
+        <input type="url" id="don3" placeholder="Enter Investor logo">
+        <br>
+        <br>
+        <input type="submit" name="" id="don4">
+    </form>
+</body>
+</html>
+
+<script>
+    document.querySelector("form").addEventListener("submit",myfunction);
+
+    var investorsarr=JSON.parse(localStorage.getItem("investordata"))||[];
+
+    function myfunction(){
+        event.preventDefault();
+
+        var investorsobj={
+            investorsimage:one.don.value,
+            investorsname:one.don1.value,
+            investorrole:one.don2.value,
+            investorlogo:one.don3.value
+        };
+        investorsarr.push(investorsobj);
+        localStorage.setItem("investordata",JSON.stringify(investorsarr));
+        console.log(investorsarr)
+    }
+</script>

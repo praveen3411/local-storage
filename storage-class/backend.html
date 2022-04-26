@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="investor.css">
+</head>
+<body>
+    <div id="navbar">
+        <div><a href="invest.html">Back-End</a></div>
+        <div><a href="backend.html">Front-End</a></div>
+    </div>
+    <div id="container"></div>
+</body>
+</html>
+<script>
+ var investor=JSON.parse(localStorage.getItem("investordata"))||[];
+ console.log(investor);
+
+//             investorsimage:one.don.value,
+//             investorsname:one.don1.value,
+//             investorrole:one.don2.value,
+//             investorlogo:one.don3.value
+
+investor.forEach(function(ele){
+        var box=document.createElement("div");
+        var avtar=document.createElement("img");
+        avtar.setAttribute("src",ele.investorsimage)
+        var iname=document.createElement("h3");
+        iname.innerText=ele.investorsname;
+        var role=document.createElement("p");
+        role.innerText=ele.investorrole;
+        var log=document.createElement("img");
+        log.setAttribute("src",ele.investorlogo)
+        box.append(avtar,iname,role,log,);
+        document.querySelector("#container").append(box);
+    })
+</script>
